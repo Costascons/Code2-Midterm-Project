@@ -3,6 +3,7 @@ ArrayList<Generator> generators;
 void setup() {
   size(800, 800);
   generators = new ArrayList<Generator>();
+  //colorMode(HSB,255,255,255);
 }
 
 void draw() {
@@ -39,7 +40,7 @@ class Particle {
 
   void display() {
     noStroke();
-    fill(map(life, 0,50,0,10),  map(life,50,0,8,0));
+    fill(map(life, 50,0,0,10),  map(life,50,0,8,0));
     //fill(noise());
     ellipse(this.posX, this.posY, life, life);
   }
@@ -86,7 +87,7 @@ class Generator {
     for (int i = particles.size() - 1; i >= 0; i--) {
       Particle p = particles.get(i);
       if (p.life < 0) {
-        particles.remove(i);
+       particles.remove(i);
       }
     }
   }
