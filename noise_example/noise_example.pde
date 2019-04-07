@@ -1,3 +1,5 @@
+//see also https://processing.org/examples/noise2d.html
+
 float inc = 0.06;
 int density = 4;
 float znoise = 0.0;
