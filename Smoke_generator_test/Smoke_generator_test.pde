@@ -26,25 +26,27 @@ class Particle {
   float life;
   float alpha;
 
+
   Particle(float posX, float posY) {
     this.posX = posX;
     this.posY = posY;
-    this.velX = random(-4, 4);
-    this.velY = random(-4, 4);
-    life = 40;
+    this.velX = random(-2, 2);
+    this.velY = random(-2, 2);
+    life = 80;
     alpha = 255;
+    
   }
 
   void display() {
     noStroke();
-    //fill(map(life, 0,50,0,10),  map(life,50,0,210,0));
+    fill(map(life, 0,50,0,10),  map(life,50,0,8,0));
     //fill(noise());
     ellipse(this.posX, this.posY, life, life);
   }
 
   void update() {
     life--;
-    alpha -=10;
+    alpha --;
     this.posX += this.velX;
     this.posY += this.velY;
 
