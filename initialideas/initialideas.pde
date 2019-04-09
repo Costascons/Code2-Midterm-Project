@@ -5,7 +5,7 @@ Table cancerData;
 
 void setup() {
   size(800, 800);
-  anatomy = loadImage("Anatomy.png");  
+  anatomy = loadImage("Anatomy Outline.png");  
 
   cancerData = loadTable("Cancer Data 2019.csv", "header"); 
   println(cancerData.getRowCount() + " total rows in cancerData");
