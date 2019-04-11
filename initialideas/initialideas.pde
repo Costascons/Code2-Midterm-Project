@@ -20,10 +20,32 @@ void setup() {
 
     println(row.getString(0) + " has a deathRate of " + EstimatedDeaths );
   }
-  }
+}
 
-  void draw() {
-    background(255);
-    imageMode(CENTER);
-    image(anatomy, width/2, height/2);
-  }
+void draw() {
+  background(255);
+  imageMode(CENTER);
+  image(anatomy, width/2, height/2);
+}
+
+
+//Pseudo Code for how each classes would work
+
+//Particle class -> Generator class -> Cancer Position class -> Boundary class
+/* 
+ Particle class
+ Particle (color, size)
+ *Numbers from Data goes here(?)*
+ -------------------------------------------
+ Generator class
+ Generator (position,duration)
+ -------------------------------------------
+ Cancer Position class
+ extends Generator(to generate the partcie from the spot(?))
+ CancerPosition (position)
+ -------------------------------------------
+ Boundary class
+ extends CancerPosition
+ Boundary (position, size)
+ Check if clicked inside -> Generate Particles from CancerPosition
+ */
