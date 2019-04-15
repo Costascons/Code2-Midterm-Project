@@ -1,33 +1,32 @@
-//This is very slow so i dont think its a good way to do it lol
-//maybe we dont need cnacer position
+//Put generator into boundary
+ArrayList<Generator> generators;
 
-ArrayList<CancerPosition> newCancer;
 
 void setup() {
   size(800, 800);
-
+  generators = new ArrayList<Generator>();
   //colorMode(HSB,255,255,255);
 
-  newCancer = new ArrayList<CancerPosition>();
   rectMode(CENTER);
 }
 
 void draw() {
   background(20);
 
-  for (int i = 0; i < newCancer.size(); i++) {
-    CancerPosition cp = newCancer.get(i);
-    cp.addCancer();
-    cp.makeGenerator();
-  }
   //noFill();
   //rect (width/2, height/2, 200, 200);
+
+  for (int i = 0; i < generators.size(); i++) {
+    Generator g = generators.get(i);
+    g.addParticles();
+    g.drawParticles();
+  }
 }
 
 //boundary check
 void mousePressed() {
   //  if (mouseX < width/2 + 200/2 && mouseX > width/2 - 200/2 && mouseY < height/2 + 200/2 && mouseY > height/2 - 200/2) {
-  newCancer.add(new CancerPosition(mouseX, mouseY, 80, color(255, 60, 100)));
+  generators.add(new Generator(mouseX, mouseY, 80, color(255, 20, 60)));
 
   //  }
 }
