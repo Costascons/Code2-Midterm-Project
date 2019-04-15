@@ -35,10 +35,12 @@ void draw() {
 /* 
  Particle class
  Particle (color, size)
- *Numbers from Data goes here(?)*
+
  -------------------------------------------
  Generator class
  Generator (position,duration)
+ 
+  *Numbers from Data goes here(?)*
  -------------------------------------------
  Cancer Position class
  extends Generator(to generate the partcie from the spot(?))

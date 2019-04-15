@@ -3,15 +3,19 @@ class Generator {
   float posX;
   float posY;
   float rate; 
+  float life;
+  color c;
 
-  Generator(float posX, float posY) {
+  Generator(float posX, float posY, float life, color c) {
     this.posX = posX;
     this.posY = posY;
     particles = new ArrayList<Particle>();
+    this.life = life;
+    this.c = c;
   }
 
   void addParticles() {
-    particles.add(new Particle(this.posX, this.posY));
+    particles.add(new Particle(this.posX, this.posY, life, c));
   }
 
   void drawParticles() {
@@ -27,5 +31,9 @@ class Generator {
        particles.remove(i);
       }
     }
+  }
+  
+  void update(){
+   life--; 
   }
 }
