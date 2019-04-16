@@ -5,17 +5,19 @@ class Generator {
   float rate; 
   float life;
   color c;
+  float emitRate;
 
-  Generator(float posX, float posY, float life, color c) {
+  Generator(float posX, float posY, float life, color c, float emitRate) {
     this.posX = posX;
     this.posY = posY;
     particles = new ArrayList<Particle>();
     this.life = life;
     this.c = c;
+    this.emitRate = emitRate;
   }
 
   void addParticles() {
-    particles.add(new Particle(this.posX, this.posY, life, c));
+    particles.add(new Particle(this.posX, this.posY, life, c, emitRate));
   }
 
   void drawParticles() {

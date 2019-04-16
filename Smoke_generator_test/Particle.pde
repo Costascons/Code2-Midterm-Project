@@ -6,9 +6,10 @@ class Particle {
   float life;
   float alpha;
   color c;
+  float emitRate;
 
 
-  Particle(float posX, float posY, float life, color c) {
+  Particle(float posX, float posY, float life, color c, float emitRate) {
     this.posX = posX;
     this.posY = posY;
     this.velX = random(-2, 2);
@@ -16,6 +17,7 @@ class Particle {
     this.life = life;
     alpha = 255;
     this.c = c;
+    this.emitRate = emitRate;
   }
 
   void display() {
@@ -27,7 +29,7 @@ class Particle {
   }
 
   void update() {
-    life-=0.75;
+    life-= emitRate;
     alpha -=0.75;
     this.posX += this.velX;
     this.posY += this.velY;

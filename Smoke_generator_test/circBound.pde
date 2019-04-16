@@ -6,17 +6,18 @@ class CircBound {
   boolean isInside;
   float life;
   color col;
+  float emit;
   //ArrayList<Generator> generators;
   Generator g; //= new Generator(posX, posY, life, col);
 
-  CircBound(float posX, float posY, int r, float life, color col) {
+  CircBound(float posX, float posY, int r, float life, color col, float emit) {
     this.posX = posX;
     this.posY = posY;
     this.radius = r;
     isInside = false;
     this.life = life;
     this.col = col;
-    
+    this.emit = emit;
     //generators = new ArrayList<Generator>();
   }
   
@@ -50,7 +51,7 @@ class CircBound {
   void makeGen(){
    //if (isInside == true){
      //generators.add(new Generator(posX, posY, 80, color(255, 20, 60)));
-       g = new Generator(posX, posY, life, col);
+       g = new Generator(posX, posY, life, col, emit);
    //}
   }
 }

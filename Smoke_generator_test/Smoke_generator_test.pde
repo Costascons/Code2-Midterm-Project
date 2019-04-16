@@ -1,7 +1,13 @@
 //Put generator into boundary
 int numBounds = 27;
+int emitOne= 3;
 
-CircBound c = new CircBound(400,400,200, 80, 10);
+//array of dat
+//color = map(arrayofdata at [], 0 , maxNumber of data, 0 , 200), map..
+
+//CircBound[] yay = new CircBound[27];
+
+CircBound c = new CircBound(400,153,200, 80, color(120,120,41), emitOne);
 
 PImage anatomy;
 Table cancerData;
@@ -48,5 +54,8 @@ void draw() {
 void mousePressed() {
 
     c.hitDetect();
+    
+    println(mouseX, mouseY);
+    
 
 }
