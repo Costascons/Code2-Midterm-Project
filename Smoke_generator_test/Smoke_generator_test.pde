@@ -1,13 +1,13 @@
 //Put generator into boundary
 int numBounds = 27;
-ArrayList<Generator> generators;
+
+CircBound c = new CircBound(400,400,200, 80, 10);
 
 PImage anatomy;
 Table cancerData;
 
 void setup() {
   size(800, 800);
-  generators = new ArrayList<Generator>();
   //colorMode(HSB,255,255,255);
 
   rectMode(CENTER);
@@ -39,21 +39,14 @@ void draw() {
   imageMode(CENTER);
   image(anatomy, width/2, height/2);
 
-
-  for (int i = 0; i < generators.size(); i++) {
-    Generator g = generators.get(i);
-    g.addParticles();
-    g.drawParticles();
-  }
+  
+  c.display();
+  
 }
 
 //boundary check
 void mousePressed() {
-  //  if (mouseX < width/2 + 200/2 && mouseX > width/2 - 200/2 && mouseY < height/2 + 200/2 && mouseY > height/2 - 200/2) {
-    
-    if(dist(width/2,height/2, mouseX, mouseY)< 200){
-  generators.add(new Generator(mouseX, mouseY, 80, color(255, 20, 60)));
-    }
 
-  //  }
+    c.hitDetect();
+
 }

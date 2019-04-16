@@ -1,3 +1,4 @@
+//color of smoke relate to boundary size
 class Boundaries {
  PVector position;
  float w, h;
