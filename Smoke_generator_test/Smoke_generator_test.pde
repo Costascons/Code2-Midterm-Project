@@ -51,7 +51,6 @@ void draw() {
   imageMode(CENTER);
   image(anatomy, width/2, height/2);
   
-  rect(100,100,100,100);
   
   c.display();
 }
