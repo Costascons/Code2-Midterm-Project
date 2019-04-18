@@ -1,13 +1,19 @@
 //Put generator into boundary
 int numBounds = 27;
 int emitOne= 3;
+//make green as constant
+int g = color (0, 255, 0);
+
 
 //array of dat
 //color = map(arrayofdata at [], 0 , maxNumber of data, 0 , 200), map..
 
 //CircBound[] yay = new CircBound[27];
 
-CircBound c = new CircBound(400,153,200, 80, color(120,120,41), emitOne);
+//CircBound c = new CircBound(400,153,200, 80, color(120,120,41), emitOne);
+//picked one number from the data and mapped it to red and blue value
+//maybe this can be a loop?
+CircBound c = new CircBound(400, 153, 200, 80, color(map(16080, 0, 51020, 0, 255), g, map(16080, 0, 51020, 255, 0)), emitOne);
 
 PImage anatomy;
 Table cancerData;
@@ -17,7 +23,7 @@ void setup() {
   //colorMode(HSB,255,255,255);
 
   rectMode(CENTER);
-  
+
   size(800, 800);
   anatomy = loadImage("Anatomy Outline.png");  
 
@@ -39,23 +45,21 @@ void setup() {
 void draw() {
   noFill();
   noStroke();
-  ellipse(width/2, height/2, 200,200);
+  ellipse(width/2, height/2, 200, 200);
 
   background(255);
   imageMode(CENTER);
   image(anatomy, width/2, height/2);
-
+  
+  rect(100,100,100,100);
   
   c.display();
-  
 }
 
 //boundary check
 void mousePressed() {
 
-    c.hitDetect();
-    
-    println(mouseX, mouseY);
-    
+  c.hitDetect();
 
+  println(mouseX, mouseY);
 }
