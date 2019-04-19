@@ -1,3 +1,5 @@
+//make particle goes up
+
 int numBounds = 27;
 //0 -4000
 float emitOne= 3;
@@ -15,13 +17,12 @@ int boundRadius = 25;
 int  particleRadius = 70;
 int maxData = 51020;
 
-//array of dat
-//color = map(arrayofdata at [], 0 , maxNumber of data, 0 , 200), map..
-
 //CircBound[] yay = new CircBound[27];
 
 //picked one number from the data and mapped it to red and blue value
 //maybe this can be a loop?
+
+//make arraylist
 
 //Brain
 CircBound c1 = new CircBound(404, 159, boundRadius, particleRadius, color(map(17760, 0, maxData, 0, 255), g, map(17760, 0, maxData, 255, 0)), emitThree);
@@ -97,6 +98,7 @@ void setup() {
     int EstimatedDeaths = row.getInt("Estimated Deaths (Both Sexes)");
     //  String whatever = row.getString("Estimated Deaths (Both Sexes)");
     //   String name = row.getString("Thyroid");  
+    // make for loop //if statement will be here
 
     println(row.getString(0) + " has a deathRate of " + EstimatedDeaths );
   }
