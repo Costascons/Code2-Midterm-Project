@@ -23,7 +23,7 @@ class Particle {
   void display() {
     noStroke();
     //fill(map(life, 80,0,0,100),  map(life,80,0,8,0));
-   fill(c, map(life, 0, alpha, 0, 75));
+   fill(c, map(life, 0, alpha, 0, 85));
    // fill(c, map(life, 80, 0, 8, 0));
     ellipse(this.posX, this.posY, life, life);
   }
