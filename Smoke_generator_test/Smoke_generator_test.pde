@@ -1,5 +1,9 @@
+
 ArrayList<CircBound> circBound;
 ArrayList<CircBound> circ = new ArrayList<CircBound>();
+//make particle goes up
+
+>>>>>>> 5f8f2c56881e244e4556825b40c179e343ce0917
 int numBounds = 27;
 //0 -4000
 float emitOne= 3;
@@ -20,8 +24,11 @@ int maxData = 51020;
 //array of dat
 //color = map(arrayofdata at [], 0 , maxNumber of data, 0 , 200), map..
 
+
 //picked one number from the data and mapped it to red and blue value
 //maybe this can be a loop?
+
+//make arraylist
 
 ////Brain
 //CircBound c1 = new CircBound(404, 159, boundRadius, particleRadius, color(map(17760, 0, maxData, 0, 255), g, map(17760, 0, maxData, 255, 0)), emitThree);
@@ -74,7 +81,6 @@ int maxData = 51020;
 //CircBound c26 = new CircBound(379, 541, boundRadius, particleRadius, color(map(1660, 0, maxData, 0, 255), g, map(1660, 0, maxData, 255, 0)), emitOne);
 
 
-
 PImage anatomy;
 Table cancerData;
 
@@ -99,7 +105,7 @@ void setup() {
     int ypos = row.getInt("YPos");
     int Emit = row.getInt("Emit");
     circ.add(new CircBound (xpos, ypos, boundRadius, particleRadius, color(map(EstimatedDeaths, 0, maxData, 0, 255), g, map(EstimatedDeaths, 0, maxData, 255, 0)), Emit));
-      
+
 
     println(row.getString(0) + " has a deathRate of " + EstimatedDeaths );
   }
