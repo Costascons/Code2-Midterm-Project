@@ -29,7 +29,7 @@ class Particle {
   }
 
   void update() {
-    life-= emitRate;
+    life -= emitRate;
     alpha -=0.75;
     this.posX += this.velX;
     this.posY += this.velY;
