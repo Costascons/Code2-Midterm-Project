@@ -17,8 +17,8 @@ int maxData = 51020;
 //CircBound c = new CircBound(400,153,200, 80, color(120,120,41), emitOne);
 //picked one number from the data and mapped it to red and blue value
 //maybe this can be a loop?
-CircBound c1 = new CircBound(404, 159, boundRadius, particleRadius, color(map(17760, 0, maxData, 255, 0), g, map(17760, 0, maxData, 0, 255)), emitOne);
-CircBound c2 = new CircBound(416, 196, boundRadius, particleRadius, color(map(16080, 0, maxData, 255, 0), g, map(16080, 0, maxData, 0, 255)), emitOne);
+CircBound c1 = new CircBound(404, 159, boundRadius, particleRadius, color(map(17760, 0, maxData, 0, 255), g, map(17760, 0, maxData, 255, 0)), emitOne);
+CircBound c2 = new CircBound(416, 196, boundRadius, particleRadius, color(map(16080, 0, maxData, 0, 255), g, map(16080, 0, maxData, 255, 0)), emitOne);
 //CircBound c3 = new CircBound(409, 214, 200, 80, color(map(16080, 0, 51020, 0, 255), g, map(16080, 0, 51020, 255, 0)), emitOne);
 //CircBound c4 = new CircBound(391, 222, 200, 80, color(map(16080, 0, 51020, 0, 255), g, map(16080, 0, 51020, 255, 0)), emitOne);
 //CircBound c5 = new CircBound(398, 238, 200, 80, color(map(16080, 0, 51020, 0, 255), g, map(16080, 0, 51020, 255, 0)), emitOne);
