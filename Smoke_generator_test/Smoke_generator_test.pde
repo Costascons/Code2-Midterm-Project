@@ -5,7 +5,7 @@ float emitThree = 0.5;
 float emitFour = 0.2;
 //make green as constant
 int g = color (0, 255, 0);
-int boundRadius = 50;
+int boundRadius = 25;
 int  particleRadius = 70;
 int maxData = 51020;
 
