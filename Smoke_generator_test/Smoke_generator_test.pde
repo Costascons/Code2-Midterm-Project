@@ -1,12 +1,13 @@
-//Put generator into boundary
 int numBounds = 27;
-float emitOne= 7;
-float emitTwo = 3;
+float emitOne= 3;
+float emitTwo = 1;
 float emitThree = 0.5;
 float emitFour = 0.2;
 //make green as constant
 int g = color (0, 255, 0);
-
+int boundRadius = 50;
+int  particleRadius = 70;
+int maxData = 51020;
 
 //array of dat
 //color = map(arrayofdata at [], 0 , maxNumber of data, 0 , 200), map..
@@ -16,8 +17,8 @@ int g = color (0, 255, 0);
 //CircBound c = new CircBound(400,153,200, 80, color(120,120,41), emitOne);
 //picked one number from the data and mapped it to red and blue value
 //maybe this can be a loop?
-CircBound c1 = new CircBound(404, 159, 2, 80, color(map(17760, 0, 17760, 0, 255), g, map(17760, 0, 17760, 255, 0)), emitOne);
-//CircBound c2 = new CircBound(416, 196, 200, 80, color(map(16080, 0, 51020, 0, 255), g, map(16080, 0, 51020, 255, 0)), emitOne);
+CircBound c1 = new CircBound(404, 159, boundRadius, particleRadius, color(map(17760, 0, maxData, 255, 0), g, map(17760, 0, maxData, 0, 255)), emitOne);
+CircBound c2 = new CircBound(416, 196, boundRadius, particleRadius, color(map(16080, 0, maxData, 255, 0), g, map(16080, 0, maxData, 0, 255)), emitOne);
 //CircBound c3 = new CircBound(409, 214, 200, 80, color(map(16080, 0, 51020, 0, 255), g, map(16080, 0, 51020, 255, 0)), emitOne);
 //CircBound c4 = new CircBound(391, 222, 200, 80, color(map(16080, 0, 51020, 0, 255), g, map(16080, 0, 51020, 255, 0)), emitOne);
 //CircBound c5 = new CircBound(398, 238, 200, 80, color(map(16080, 0, 51020, 0, 255), g, map(16080, 0, 51020, 255, 0)), emitOne);
@@ -82,7 +83,7 @@ void draw() {
   
   
   c1.display();
-  //c2.display();
+  c2.display();
   //c3.display();
   //c4.display();
   //c5.display();
@@ -114,7 +115,7 @@ void draw() {
 void mousePressed() {
 
   c1.hitDetect();
-  //c2.hitDetect();
+  c2.hitDetect();
   //c3.hitDetect();
   //c4.hitDetect();
   //c5.hitDetect();
