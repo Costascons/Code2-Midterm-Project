@@ -12,8 +12,8 @@ class Particle {
   Particle(float posX, float posY, float life, color c, float emitRate) {
     this.posX = posX;
     this.posY = posY;
-    this.velX = random(-2, 2);
-    this.velY = random(-2, 2);
+    this.velX = random(-0.75, 0.75);
+    this.velY = random(-3.75, 0.5);
     this.life = life;
     alpha = 255;
     this.c = c;
@@ -36,10 +36,12 @@ class Particle {
 
     // check if it goes off
     if (this.posX > width || this.posX < 0) {
-      this.velX *= -1;
+      //this.velX *= -1;
+      life = 0;
     }
     if (this.posY > height || this.posY < 0) {
-      this.velY *= -1;
+      //this.velY *= -1;
+      life = 0;
     }
   }
 }

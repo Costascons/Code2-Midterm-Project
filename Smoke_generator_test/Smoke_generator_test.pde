@@ -3,7 +3,6 @@ ArrayList<CircBound> circBound;
 ArrayList<CircBound> circ = new ArrayList<CircBound>();
 //make particle goes up
 
->>>>>>> 5f8f2c56881e244e4556825b40c179e343ce0917
 int numBounds = 27;
 //0 -4000
 float emitOne= 3;
@@ -103,12 +102,12 @@ void setup() {
     int EstimatedDeaths = row.getInt("Estimated Deaths (Both Sexes)");
     int xpos = row.getInt("XPos");
     int ypos = row.getInt("YPos");
-    int Emit = row.getInt("Emit");
+    float Emit = row.getFloat("Emit");
     circ.add(new CircBound (xpos, ypos, boundRadius, particleRadius, color(map(EstimatedDeaths, 0, maxData, 0, 255), g, map(EstimatedDeaths, 0, maxData, 255, 0)), Emit));
 
 
     println(row.getString(0) + " has a deathRate of " + EstimatedDeaths );
-    //circBound
+    
   }
 }
 
