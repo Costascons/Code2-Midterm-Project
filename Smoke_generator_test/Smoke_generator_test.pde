@@ -101,6 +101,7 @@ void setup() {
     // make for loop //if statement will be here
 
     println(row.getString(0) + " has a deathRate of " + EstimatedDeaths );
+    //circBound
   }
 }
 
