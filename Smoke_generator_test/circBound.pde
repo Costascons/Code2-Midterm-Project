@@ -1,4 +1,3 @@
-//doesn't work??
 class CircBound {
   float posX;
   float posY;
@@ -7,7 +6,7 @@ class CircBound {
   float life;
   color col;
   float emit;
-  //ArrayList<Generator> generators;
+
   Generator g; //= new Generator(posX, posY, life, col);
 
   CircBound(float posX, float posY, int r, float life, color col, float emit) {
@@ -18,18 +17,13 @@ class CircBound {
     this.life = life;
     this.col = col;
     this.emit = emit;
-    //generators = new ArrayList<Generator>();
+
   }
   
   void display(){
    noFill();
    noStroke();
    ellipse(posX, posY, radius, radius);
-   
-  //  for (int i = 0; i < generators.size(); i++) {
-  //  Generator g = generators.get(i);
-  //  g.addParticles();
-  //  g.drawParticles();
   
   if (isInside){
    g.addParticles();
@@ -41,17 +35,13 @@ class CircBound {
   
   void hitDetect(){
    if (dist(mouseX, mouseY, posX, posY)< radius){
-     //if (mousePressed){
        isInside = !isInside;
        makeGen();
-     //}
    }
   }
   
   void makeGen(){
-   //if (isInside == true){
-     //generators.add(new Generator(posX, posY, 80, color(255, 20, 60)));
+
        g = new Generator(posX, posY, life, col, emit);
-   //}
   }
 }
