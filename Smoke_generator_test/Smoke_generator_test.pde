@@ -1,8 +1,6 @@
 
 ArrayList<CircBound> circBound;
 ArrayList<CircBound> circ = new ArrayList<CircBound>();
-//make particle goes up
-
 int numBounds = 27;
 //0 -4000
 float emitOne= 3;
